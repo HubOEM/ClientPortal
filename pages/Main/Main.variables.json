@@ -1,0 +1,935 @@
+{
+  "ArolcustomerportalPodetailData" : {
+    "_id" : "wm-ArolcustomerportalPodetailData-wm.LiveVariable-1546022495421",
+    "name" : "ArolcustomerportalPodetailData",
+    "owner" : "Page",
+    "category" : "wm.LiveVariable",
+    "dataBinding" : [ ],
+    "operation" : "read",
+    "dataSet" : [ ],
+    "type" : "Podetail",
+    "isList" : true,
+    "saveInPhonegap" : false,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "inFlightBehavior" : "executeLast",
+    "startUpdate" : false,
+    "autoUpdate" : false,
+    "transformationRequired" : false,
+    "liveSource" : "arolcustomerportal",
+    "ignoreCase" : true,
+    "matchMode" : "startignorecase",
+    "orderBy" : "idpodetail asc",
+    "propertiesMap" : {
+      "columns" : [ {
+        "fieldName" : "idpodetail",
+        "type" : "integer",
+        "fullyQualifiedType" : "integer",
+        "columnName" : "idpodetail",
+        "isPrimaryKey" : true,
+        "notNull" : true,
+        "length" : 0,
+        "precision" : 10,
+        "generator" : "identity",
+        "isRelated" : false,
+        "scale" : 0
+      }, {
+        "fieldName" : "partid",
+        "type" : "string",
+        "fullyQualifiedType" : "string",
+        "columnName" : "partid",
+        "isPrimaryKey" : false,
+        "notNull" : true,
+        "length" : 45,
+        "precision" : 0,
+        "generator" : "assigned",
+        "isRelated" : false,
+        "scale" : 0
+      }, {
+        "fieldName" : "quantity",
+        "type" : "big_decimal",
+        "fullyQualifiedType" : "big_decimal",
+        "columnName" : "quantity",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 0,
+        "precision" : 22,
+        "generator" : "assigned",
+        "isRelated" : false,
+        "scale" : 9
+      }, {
+        "fieldName" : "price",
+        "type" : "big_decimal",
+        "fullyQualifiedType" : "big_decimal",
+        "columnName" : "price",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 0,
+        "precision" : 22,
+        "generator" : "assigned",
+        "isRelated" : false,
+        "scale" : 9
+      }, {
+        "fieldName" : "poid",
+        "type" : "string",
+        "fullyQualifiedType" : "string",
+        "columnName" : "poid",
+        "isPrimaryKey" : false,
+        "notNull" : true,
+        "length" : 45,
+        "precision" : 0,
+        "generator" : "assigned",
+        "isRelated" : false,
+        "scale" : 0
+      } ],
+      "entityName" : "Podetail",
+      "fullyQualifiedName" : "com.huboem.arolcustomerportal.Podetail",
+      "tableType" : "TABLE",
+      "primaryFields" : [ "idpodetail" ]
+    },
+    "isDefault" : true,
+    "bindCount" : 1,
+    "tableName" : "podetail",
+    "tableType" : "TABLE",
+    "properties" : [ ],
+    "relatedTables" : [ ],
+    "filterFields" : { },
+    "filterExpressions" : {
+      "condition" : "AND",
+      "rules" : [ {
+        "target" : "poid",
+        "type" : "string",
+        "matchMode" : "exact",
+        "value" : "bind:Widgets.VwPoTable1.selecteditem.idpo | numberToString",
+        "required" : false,
+        "secondvalue" : "",
+        "isFirst" : true
+      } ]
+    },
+    "package" : "com.huboem.arolcustomerportal.Podetail"
+  },
+  "ArolcustomerportalRfqData" : {
+    "_id" : "wm-ArolcustomerportalRfqData-wm.LiveVariable-1546012732823",
+    "name" : "ArolcustomerportalRfqData",
+    "owner" : "Page",
+    "category" : "wm.LiveVariable",
+    "dataBinding" : [ ],
+    "operation" : "read",
+    "dataSet" : [ ],
+    "type" : "Rfq",
+    "isList" : true,
+    "saveInPhonegap" : false,
+    "maxResults" : 200,
+    "designMaxResults" : 10,
+    "inFlightBehavior" : "executeLast",
+    "startUpdate" : true,
+    "autoUpdate" : false,
+    "transformationRequired" : false,
+    "liveSource" : "arolcustomerportal",
+    "ignoreCase" : true,
+    "matchMode" : "startignorecase",
+    "orderBy" : "idrfq asc",
+    "propertiesMap" : {
+      "columns" : [ {
+        "fieldName" : "idrfq",
+        "type" : "integer",
+        "fullyQualifiedType" : "integer",
+        "columnName" : "idrfq",
+        "isPrimaryKey" : true,
+        "notNull" : true,
+        "length" : 0,
+        "precision" : 10,
+        "generator" : "identity",
+        "isRelated" : false,
+        "scale" : 0
+      }, {
+        "fieldName" : "tenantId",
+        "type" : "string",
+        "fullyQualifiedType" : "string",
+        "columnName" : "tenant_id",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 45,
+        "precision" : 0,
+        "generator" : "assigned",
+        "isRelated" : false,
+        "scale" : 0
+      }, {
+        "fieldName" : "vendorId",
+        "type" : "string",
+        "fullyQualifiedType" : "string",
+        "columnName" : "vendor_id",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 45,
+        "precision" : 0,
+        "generator" : "assigned",
+        "isRelated" : false,
+        "scale" : 0
+      }, {
+        "fieldName" : "serial",
+        "type" : "string",
+        "fullyQualifiedType" : "string",
+        "columnName" : "serial",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 45,
+        "precision" : 0,
+        "generator" : "assigned",
+        "isRelated" : false,
+        "scale" : 0
+      }, {
+        "fieldName" : "part",
+        "type" : "string",
+        "fullyQualifiedType" : "string",
+        "columnName" : "part",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 45,
+        "precision" : 0,
+        "generator" : "assigned",
+        "isRelated" : false,
+        "scale" : 0
+      }, {
+        "fieldName" : "description",
+        "type" : "string",
+        "fullyQualifiedType" : "string",
+        "columnName" : "description",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 45,
+        "precision" : 0,
+        "generator" : "assigned",
+        "isRelated" : false,
+        "scale" : 0
+      }, {
+        "fieldName" : "status",
+        "type" : "string",
+        "fullyQualifiedType" : "string",
+        "columnName" : "status",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 45,
+        "precision" : 0,
+        "generator" : "assigned",
+        "isRelated" : false,
+        "scale" : 0
+      } ],
+      "entityName" : "Rfq",
+      "fullyQualifiedName" : "com.huboem.arolcustomerportal.Rfq",
+      "tableType" : "TABLE",
+      "primaryFields" : [ "idrfq" ]
+    },
+    "isDefault" : true,
+    "bindCount" : 1,
+    "tableName" : "rfq",
+    "tableType" : "TABLE",
+    "properties" : [ ],
+    "relatedTables" : [ ],
+    "filterFields" : { },
+    "filterExpressions" : {
+      "condition" : "AND",
+      "rules" : [ {
+        "target" : "vendorId",
+        "type" : "string",
+        "matchMode" : "anywhereignorecase",
+        "value" : "bind:Variables.loggedInUser.dataSet.id",
+        "required" : false,
+        "secondvalue" : "",
+        "isFirst" : true
+      } ]
+    },
+    "package" : "com.huboem.arolcustomerportal.Rfq"
+  },
+  "ArolcustomerportalVwPoData" : {
+    "_id" : "wm-ArolcustomerportalVwPoData-wm.LiveVariable-1546011963077",
+    "name" : "ArolcustomerportalVwPoData",
+    "owner" : "Page",
+    "category" : "wm.LiveVariable",
+    "dataBinding" : [ ],
+    "operation" : "read",
+    "dataSet" : [ ],
+    "type" : "VwPo",
+    "isList" : true,
+    "saveInPhonegap" : false,
+    "maxResults" : 200,
+    "designMaxResults" : 10,
+    "inFlightBehavior" : "executeLast",
+    "startUpdate" : false,
+    "autoUpdate" : false,
+    "transformationRequired" : false,
+    "liveSource" : "arolcustomerportal",
+    "ignoreCase" : true,
+    "matchMode" : "startignorecase",
+    "propertiesMap" : {
+      "columns" : [ {
+        "fieldName" : "idpo",
+        "type" : "integer",
+        "fullyQualifiedType" : "integer",
+        "columnName" : "idpo",
+        "isPrimaryKey" : false,
+        "notNull" : true,
+        "length" : 0,
+        "precision" : 10,
+        "generator" : "assigned",
+        "isRelated" : false,
+        "defaultValue" : "0",
+        "scale" : 0
+      }, {
+        "fieldName" : "vendor",
+        "type" : "string",
+        "fullyQualifiedType" : "string",
+        "columnName" : "vendor",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 45,
+        "precision" : 0,
+        "generator" : "assigned",
+        "isRelated" : false,
+        "scale" : 0
+      }, {
+        "fieldName" : "serial",
+        "type" : "string",
+        "fullyQualifiedType" : "string",
+        "columnName" : "serial",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 45,
+        "precision" : 0,
+        "generator" : "assigned",
+        "isRelated" : false,
+        "scale" : 0
+      }, {
+        "fieldName" : "podate",
+        "type" : "date",
+        "fullyQualifiedType" : "date",
+        "columnName" : "podate",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 0,
+        "precision" : 0,
+        "generator" : "assigned",
+        "isRelated" : false,
+        "scale" : 0
+      }, {
+        "fieldName" : "ponum",
+        "type" : "string",
+        "fullyQualifiedType" : "string",
+        "columnName" : "ponum",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 45,
+        "precision" : 0,
+        "generator" : "assigned",
+        "isRelated" : false,
+        "scale" : 0
+      }, {
+        "fieldName" : "approval",
+        "type" : "string",
+        "fullyQualifiedType" : "string",
+        "columnName" : "approval",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 45,
+        "precision" : 0,
+        "generator" : "assigned",
+        "isRelated" : false,
+        "scale" : 0
+      }, {
+        "fieldName" : "status",
+        "type" : "string",
+        "fullyQualifiedType" : "string",
+        "columnName" : "status",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 45,
+        "precision" : 0,
+        "generator" : "assigned",
+        "isRelated" : false,
+        "scale" : 0
+      }, {
+        "fieldName" : "created",
+        "type" : "datetime",
+        "fullyQualifiedType" : "datetime",
+        "columnName" : "created",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 0,
+        "precision" : 0,
+        "generator" : "assigned",
+        "isRelated" : false,
+        "scale" : 0
+      }, {
+        "fieldName" : "vendorId",
+        "type" : "string",
+        "fullyQualifiedType" : "string",
+        "columnName" : "vendor_id",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 45,
+        "precision" : 0,
+        "generator" : "assigned",
+        "isRelated" : false,
+        "scale" : 0
+      } ],
+      "entityName" : "VwPo",
+      "fullyQualifiedName" : "com.huboem.arolcustomerportal.VwPo",
+      "tableType" : "VIEW",
+      "primaryFields" : [ ]
+    },
+    "isDefault" : true,
+    "bindCount" : 0,
+    "tableName" : "vw_po",
+    "tableType" : "VIEW",
+    "properties" : [ ],
+    "relatedTables" : [ ],
+    "filterFields" : { },
+    "filterExpressions" : {
+      "condition" : "AND",
+      "rules" : [ {
+        "target" : "status",
+        "type" : "string",
+        "matchMode" : "exact",
+        "value" : "bind:\"Confirmed\"",
+        "required" : false,
+        "secondvalue" : "",
+        "isFirst" : true
+      }, {
+        "target" : "vendorId",
+        "type" : "string",
+        "matchMode" : "exact",
+        "value" : "bind:Variables.loggedInUser.dataSet.id",
+        "required" : false,
+        "secondvalue" : "",
+        "isFirst" : true
+      } ]
+    },
+    "package" : "com.huboem.arolcustomerportal.VwPo"
+  },
+  "ArolcustomerportalVwServiceData" : {
+    "_id" : "wm-ArolcustomerportalVwServiceData-wm.LiveVariable-1546012640362",
+    "name" : "ArolcustomerportalVwServiceData",
+    "owner" : "Page",
+    "category" : "wm.LiveVariable",
+    "dataBinding" : [ ],
+    "operation" : "read",
+    "dataSet" : [ ],
+    "type" : "VwService",
+    "isList" : true,
+    "saveInPhonegap" : false,
+    "maxResults" : 200,
+    "designMaxResults" : 10,
+    "inFlightBehavior" : "executeLast",
+    "startUpdate" : true,
+    "autoUpdate" : false,
+    "transformationRequired" : false,
+    "liveSource" : "arolcustomerportal",
+    "ignoreCase" : true,
+    "matchMode" : "startignorecase",
+    "propertiesMap" : {
+      "columns" : [ {
+        "fieldName" : "idservice",
+        "type" : "integer",
+        "fullyQualifiedType" : "integer",
+        "columnName" : "idservice",
+        "isPrimaryKey" : false,
+        "notNull" : true,
+        "length" : 0,
+        "precision" : 10,
+        "generator" : "assigned",
+        "isRelated" : false,
+        "defaultValue" : "0",
+        "scale" : 0
+      }, {
+        "fieldName" : "sn",
+        "type" : "string",
+        "fullyQualifiedType" : "string",
+        "columnName" : "sn",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 45,
+        "precision" : 0,
+        "generator" : "assigned",
+        "isRelated" : false,
+        "scale" : 0
+      }, {
+        "fieldName" : "oem",
+        "type" : "string",
+        "fullyQualifiedType" : "string",
+        "columnName" : "oem",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 45,
+        "precision" : 0,
+        "generator" : "assigned",
+        "isRelated" : false,
+        "scale" : 0
+      }, {
+        "fieldName" : "date",
+        "type" : "date",
+        "fullyQualifiedType" : "date",
+        "columnName" : "date",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 0,
+        "precision" : 0,
+        "generator" : "assigned",
+        "isRelated" : false,
+        "scale" : 0
+      }, {
+        "fieldName" : "description",
+        "type" : "string",
+        "fullyQualifiedType" : "string",
+        "columnName" : "description",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 500,
+        "precision" : 0,
+        "generator" : "assigned",
+        "isRelated" : false,
+        "scale" : 0
+      }, {
+        "fieldName" : "tenantId",
+        "type" : "integer",
+        "fullyQualifiedType" : "integer",
+        "columnName" : "tenant_id",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 0,
+        "precision" : 10,
+        "generator" : "assigned",
+        "isRelated" : false,
+        "scale" : 0
+      }, {
+        "fieldName" : "vendorId",
+        "type" : "string",
+        "fullyQualifiedType" : "string",
+        "columnName" : "vendor_id",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 45,
+        "precision" : 0,
+        "generator" : "assigned",
+        "isRelated" : false,
+        "scale" : 0
+      } ],
+      "entityName" : "VwService",
+      "fullyQualifiedName" : "com.huboem.arolcustomerportal.VwService",
+      "tableType" : "VIEW",
+      "primaryFields" : [ ]
+    },
+    "isDefault" : true,
+    "bindCount" : 1,
+    "tableName" : "vw_service",
+    "tableType" : "VIEW",
+    "properties" : [ ],
+    "relatedTables" : [ ],
+    "filterFields" : { },
+    "filterExpressions" : {
+      "condition" : "AND",
+      "rules" : [ {
+        "target" : "vendorId",
+        "type" : "string",
+        "matchMode" : "exact",
+        "value" : "bind:Variables.loggedInUser.dataSet.id",
+        "required" : false,
+        "secondvalue" : "",
+        "isFirst" : true
+      } ]
+    },
+    "package" : "com.huboem.arolcustomerportal.VwService"
+  },
+  "notificationAction1" : {
+    "_id" : "wm-notificationAction1-wm.NotificationVariable-1546402663285",
+    "name" : "notificationAction1",
+    "owner" : "Page",
+    "category" : "wm.NotificationVariable",
+    "dataBinding" : [ {
+      "target" : "text",
+      "value" : "PO Status updated",
+      "type" : "string"
+    }, {
+      "target" : "alerttype",
+      "value" : "success",
+      "type" : "string"
+    } ],
+    "operation" : "alert"
+  },
+  "notificationAction2" : {
+    "_id" : "wm-notificationAction2-wm.NotificationVariable-1546402690898",
+    "name" : "notificationAction2",
+    "owner" : "Page",
+    "category" : "wm.NotificationVariable",
+    "dataBinding" : [ {
+      "target" : "text",
+      "value" : "RFQ status updated",
+      "type" : "string"
+    }, {
+      "target" : "alerttype",
+      "value" : "success",
+      "type" : "string"
+    } ],
+    "operation" : "alert"
+  },
+  "notificationAction3" : {
+    "_id" : "wm-notificationAction3-wm.NotificationVariable-1546402722330",
+    "name" : "notificationAction3",
+    "owner" : "Page",
+    "category" : "wm.NotificationVariable",
+    "dataBinding" : [ {
+      "target" : "text",
+      "value" : "Service status updated",
+      "type" : "string"
+    }, {
+      "target" : "alerttype",
+      "value" : "success",
+      "type" : "string"
+    } ],
+    "operation" : "alert"
+  },
+  "rfqstatus" : {
+    "_id" : "wm-rfqstatus-wm.NotificationVariable-1546402953737",
+    "name" : "rfqstatus",
+    "owner" : "Page",
+    "category" : "wm.NotificationVariable",
+    "dataBinding" : [ {
+      "target" : "content",
+      "value" : "inline",
+      "type" : "string"
+    }, {
+      "target" : "text",
+      "value" : "RFQ Status updated!",
+      "type" : "string"
+    }, {
+      "target" : "class",
+      "value" : "Success",
+      "type" : "string"
+    }, {
+      "target" : "toasterPosition",
+      "value" : "top center",
+      "type" : "string"
+    } ],
+    "operation" : "toast"
+  },
+  "servicelv" : {
+    "_id" : "wm-servicelv-wm.LiveVariable-1546397060331",
+    "name" : "servicelv",
+    "owner" : "Page",
+    "category" : "wm.LiveVariable",
+    "dataBinding" : [ ],
+    "operation" : "read",
+    "dataSet" : [ ],
+    "type" : "Service",
+    "isList" : false,
+    "saveInPhonegap" : false,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "inFlightBehavior" : "executeLast",
+    "startUpdate" : false,
+    "autoUpdate" : false,
+    "transformationRequired" : false,
+    "liveSource" : "arolcustomerportal",
+    "ignoreCase" : true,
+    "matchMode" : "startignorecase",
+    "orderBy" : "idservice asc",
+    "propertiesMap" : {
+      "columns" : [ {
+        "fieldName" : "idservice",
+        "type" : "integer",
+        "fullyQualifiedType" : "integer",
+        "columnName" : "idservice",
+        "isPrimaryKey" : true,
+        "notNull" : true,
+        "length" : 0,
+        "precision" : 10,
+        "generator" : "identity",
+        "isRelated" : false,
+        "scale" : 0
+      }, {
+        "fieldName" : "sn",
+        "type" : "string",
+        "fullyQualifiedType" : "string",
+        "columnName" : "sn",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 45,
+        "precision" : 0,
+        "generator" : "assigned",
+        "isRelated" : false,
+        "scale" : 0
+      }, {
+        "fieldName" : "oem",
+        "type" : "string",
+        "fullyQualifiedType" : "string",
+        "columnName" : "oem",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 45,
+        "precision" : 0,
+        "generator" : "assigned",
+        "isRelated" : false,
+        "scale" : 0
+      }, {
+        "fieldName" : "date",
+        "type" : "date",
+        "fullyQualifiedType" : "date",
+        "columnName" : "date",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 0,
+        "precision" : 0,
+        "generator" : "assigned",
+        "isRelated" : false,
+        "scale" : 0
+      }, {
+        "fieldName" : "description",
+        "type" : "string",
+        "fullyQualifiedType" : "string",
+        "columnName" : "description",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 500,
+        "precision" : 0,
+        "generator" : "assigned",
+        "isRelated" : false,
+        "scale" : 0
+      }, {
+        "fieldName" : "tenantId",
+        "type" : "integer",
+        "fullyQualifiedType" : "integer",
+        "columnName" : "tenant_id",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 0,
+        "precision" : 10,
+        "generator" : "assigned",
+        "isRelated" : false,
+        "scale" : 0
+      }, {
+        "fieldName" : "status",
+        "type" : "string",
+        "fullyQualifiedType" : "string",
+        "columnName" : "status",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 45,
+        "precision" : 0,
+        "generator" : "assigned",
+        "isRelated" : false,
+        "scale" : 0
+      } ],
+      "entityName" : "Service",
+      "fullyQualifiedName" : "com.huboem.arolcustomerportal.Service",
+      "tableType" : "TABLE",
+      "primaryFields" : [ "idservice" ]
+    },
+    "bindCount" : 2,
+    "tableName" : "service",
+    "tableType" : "TABLE",
+    "properties" : [ ],
+    "relatedTables" : [ ],
+    "filterFields" : { },
+    "filterExpressions" : {
+      "condition" : "AND",
+      "rules" : [ {
+        "target" : "idservice",
+        "type" : "integer",
+        "matchMode" : "exact",
+        "value" : "bind:Widgets.VwServiceTable1.selecteditem.idservice",
+        "required" : false,
+        "secondvalue" : "",
+        "isFirst" : true
+      } ]
+    },
+    "package" : "com.huboem.arolcustomerportal.Service"
+  },
+  "serviceupdatestatus" : {
+    "_id" : "wm-serviceupdatestatus-wm.NotificationVariable-1546402979606",
+    "name" : "serviceupdatestatus",
+    "owner" : "Page",
+    "category" : "wm.NotificationVariable",
+    "dataBinding" : [ {
+      "target" : "content",
+      "value" : "inline",
+      "type" : "string"
+    }, {
+      "target" : "text",
+      "value" : "Service status updated!",
+      "type" : "string"
+    }, {
+      "target" : "class",
+      "value" : "Success",
+      "type" : "string"
+    }, {
+      "target" : "toasterPosition",
+      "value" : "top center",
+      "type" : "string"
+    } ],
+    "operation" : "toast"
+  },
+  "serviceVariable1" : {
+    "_id" : "wm-serviceVariable1-wm.ServiceVariable-1543715531766",
+    "name" : "serviceVariable1",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ ],
+    "type" : "object",
+    "service" : "MyJavaService",
+    "operation" : "sampleJavaOperation",
+    "operationId" : "MyJavaController_sampleJavaOperation",
+    "operationType" : "get",
+    "serviceType" : "JavaService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "MyJava"
+  },
+  "successPOStatus" : {
+    "_id" : "wm-successPOStatus-wm.NotificationVariable-1546402919399",
+    "name" : "successPOStatus",
+    "owner" : "Page",
+    "category" : "wm.NotificationVariable",
+    "dataBinding" : [ {
+      "target" : "content",
+      "value" : "inline",
+      "type" : "string"
+    }, {
+      "target" : "text",
+      "value" : "PO Status updated!",
+      "type" : "string"
+    }, {
+      "target" : "class",
+      "value" : "Success",
+      "type" : "string"
+    }, {
+      "target" : "toasterPosition",
+      "value" : "top center",
+      "type" : "string"
+    } ],
+    "operation" : "toast"
+  },
+  "updatepostatus" : {
+    "_id" : "wm-updatepostatus-wm.ServiceVariable-1546375446610",
+    "name" : "updatepostatus",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "idpo",
+      "value" : "bind:Widgets.VwPoTable1.selecteditem.idpo",
+      "type" : "string"
+    }, {
+      "target" : "status",
+      "value" : "bind:Widgets.select1.datavalue",
+      "type" : "string"
+    } ],
+    "type" : "com.wavemaker.commons.wrapper.IntegerWrapper",
+    "service" : "arolcustomerportal",
+    "operation" : "executeUpdatepostatus",
+    "operationId" : "QueryExecutionController_executeUpdatepostatus",
+    "operationType" : "put",
+    "serviceType" : "DataService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 1,
+    "onSuccess" : "Actions.successPOStatus.invoke()",
+    "startUpdate" : false,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "QueryExecution"
+  },
+  "updaterfqstatus" : {
+    "_id" : "wm-updaterfqstatus-wm.ServiceVariable-1546401021765",
+    "name" : "updaterfqstatus",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "idrfq",
+      "value" : "bind:Widgets.RfqTable1.selecteditem.idrfq | numberToString",
+      "type" : "string"
+    }, {
+      "target" : "status",
+      "value" : "bind:Widgets.select3.datavalue",
+      "type" : "string"
+    } ],
+    "type" : "com.wavemaker.commons.wrapper.IntegerWrapper",
+    "service" : "arolcustomerportal",
+    "operation" : "executeUpdaterfqstatus",
+    "operationId" : "QueryExecutionController_executeUpdaterfqstatus",
+    "operationType" : "put",
+    "serviceType" : "DataService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "onSuccess" : "Actions.rfqstatus.invoke()",
+    "startUpdate" : false,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "QueryExecution"
+  },
+  "updateservicestatus" : {
+    "_id" : "wm-updateservicestatus-wm.ServiceVariable-1546401085757",
+    "name" : "updateservicestatus",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "idservice",
+      "value" : "bind:Widgets.VwServiceTable1.selecteditem.idservice | numberToString",
+      "type" : "string"
+    }, {
+      "target" : "status",
+      "value" : "bind:Widgets.select2.datavalue",
+      "type" : "string"
+    } ],
+    "type" : "com.wavemaker.commons.wrapper.IntegerWrapper",
+    "service" : "arolcustomerportal",
+    "operation" : "executeUpdateservicestatus",
+    "operationId" : "QueryExecutionController_executeUpdateservicestatus",
+    "operationType" : "put",
+    "serviceType" : "DataService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "onSuccess" : "Variables.servicelv.listRecords();Actions.serviceupdatestatus.invoke()",
+    "startUpdate" : false,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "QueryExecution"
+  },
+  "vwpo" : {
+    "_id" : "wm-vwpo-wm.ServiceVariable-1546056881481",
+    "name" : "vwpo",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "id",
+      "value" : "bind:Variables.loggedInUser.dataSet.id",
+      "type" : "string"
+    } ],
+    "type" : "com.huboem.arolcustomerportal.models.query.VwpoResponse",
+    "service" : "arolcustomerportal",
+    "operation" : "executeVwpo",
+    "operationId" : "QueryExecutionController_executeVwpo",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "dataSet" : [ ],
+    "isList" : true,
+    "maxResults" : 20,
+    "startUpdate" : true,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "QueryExecution"
+  }
+}

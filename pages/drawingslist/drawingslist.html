@@ -1,0 +1,24 @@
+<wm-partial data-ng-controller="drawingslistPageController" type="rightnav" name="partial1">
+    <wm-layoutgrid name="layoutgrid1">
+        <wm-gridrow name="gridrow8_1">
+            <wm-gridcolumn columnwidth="12" name="gridcolumn3" padding="5px unset unset 20px" horizontalalign="right">
+                <wm-composite name="composite1" horizontalalign="center" captionposition="top">
+                    <wm-label class="col-md-3 control-label bg-primary" name="label1" caption="EQUIPMENT" textalign="center" fontweight="bold" fontsize="18" margin="5px unset unset unset" padding="unset 5px unset unset"></wm-label>
+                </wm-composite>
+                <wm-select name="select1" dataset="bind:Variables.equipmentvar.dataSet" datafield="All Fields" displayexpression="bind:$[data[$i].description]+&quot;-&quot;+$[data[$i].serial]" datavalue="bind:Variables.selectedEquipment.dataSet" on-change="select1Change($event, $scope, newVal, oldVal);Variables.ArolcustomerportalDocumentsData.listRecords()"></wm-select>
+            </wm-gridcolumn>
+        </wm-gridrow>
+        <wm-gridrow name="gridrow2">
+            <wm-gridcolumn columnwidth="12" name="gridcolumn4">
+                <wm-list listclass="list-group" itemclass="list-group-item" template="true" itemsperrow="xs-1 sm-1 md-1 lg-1" class="media-list" name="DocumentsList1" dataset="bind:Variables.ArolcustomerportalDocumentsData.dataSet" navigation="None">
+                    <wm-listtemplate layout="inline" name="listtemplate1">
+                        <wm-container class="media-body" padding="unset unset unset 1.25em" name="container2">
+                            <wm-label name="Name" class="p media-heading" caption="bind:Variables.ArolcustomerportalDocumentsData.dataSet.description" fontsize="1.143" fontunit="em"></wm-label>
+                            <wm-label name="JobTitle" caption="bind:Variables.ArolcustomerportalDocumentsData.dataSet.type" class="p text-muted"></wm-label>
+                        </wm-container>
+                    </wm-listtemplate>
+                </wm-list>
+            </wm-gridcolumn>
+        </wm-gridrow>
+    </wm-layoutgrid>
+</wm-partial>

@@ -1,0 +1,13 @@
+<wm-partial data-ng-controller="leftnavPageController" name="leftnav" type="leftnav">
+    <wm-nav name="leftnavigation" type="pills" layout="stacked" margin="30px unset unset unset">
+        <wm-nav-item name="list_dashboard">
+            <wm-anchor caption="Docs &amp; Drawings" name="dashboardLink" iconclass="" iconurl="resources/images/imagelists/opo3.png" iconheight="42" iconmargin="15" on-click="Actions.goToPage_Drawings.invoke()"></wm-anchor>
+        </wm-nav-item>
+        <wm-nav-item name="list_order">
+            <wm-anchor caption="Parts" name="orderLink" iconclass="" iconurl="resources/images/imagelists/parts2.png" iconheight="42" iconmargin="15" on-click="Actions.goToPage_Parts.invoke()"></wm-anchor>
+        </wm-nav-item>
+        <wm-nav-item name="list_inventory">
+            <wm-anchor caption="Service" name="inventoryLink" iconclass="" iconurl="resources/images/imagelists/parts2.png" iconheight="42" iconmargin="15" on-click="Actions.goToPage_Services2.invoke()"></wm-anchor>
+        </wm-nav-item>
+    </wm-nav>
+</wm-partial>

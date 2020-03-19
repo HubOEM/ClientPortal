@@ -1,0 +1,203 @@
+<wm-page data-ng-controller="MainPageController" name="mainpage" pagetitle="Main">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-content name="content">
+        <wm-page-content columnwidth="12" name="mainContent" padding="unset 15px">
+            <wm-layoutgrid name="layoutgrid1">
+                <wm-gridrow name="gridrow1">
+                    <wm-gridcolumn columnwidth="4" name="gridcolumn1"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="4" name="gridcolumn5"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="4" name="gridcolumn2"></wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow2">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn3" horizontalalign="center">
+                        <wm-table name="VwPoTable1" title="Parts POs" dataset="bind:Variables.vwpo.dataSet" navigation="Basic" on-rowdblclick="Widgets.dialog1.open();Variables.ArolcustomerportalPodetailData.listRecords()">
+                            <wm-table-column binding="vendor" caption="Vendor" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string"></wm-table-column>
+                            <wm-table-column binding="serial" caption="SN" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string"></wm-table-column>
+                            <wm-table-column binding="podate" caption="PO Date" generator="assigned" pcdisplay="true" mobiledisplay="true" type="date"></wm-table-column>
+                            <wm-table-column binding="ponum" caption="PO Num" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string"></wm-table-column>
+                            <wm-table-column binding="approval" caption="Approval" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string"></wm-table-column>
+                            <wm-table-column binding="status" caption="Status" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string"></wm-table-column>
+                        </wm-table>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow3" padding="unset 10px">
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn6" padding="unset 5px unset unset">
+                        <wm-table name="VwServiceTable1" title="Service Requests" dataset="bind:Variables.ArolcustomerportalVwServiceData.dataSet" navigation="Basic" on-rowdblclick="Widgets.dialog2.open();Variables.servicelv.listRecords()">
+                            <wm-table-column binding="sn" caption="SN" width="65px" edit-widget-type="text" type="string" generator="assigned" show="true" readonly="false"></wm-table-column>
+                            <wm-table-column binding="oem" caption="OEM" width="120px" edit-widget-type="text" type="string" generator="assigned" show="true" readonly="false"></wm-table-column>
+                            <wm-table-column binding="date" caption="Date" width="90px" edit-widget-type="date" type="date" generator="assigned" show="true" readonly="false"></wm-table-column>
+                            <wm-table-column binding="description" caption="Description" edit-widget-type="text" type="string" generator="assigned" show="true" readonly="false"></wm-table-column>
+                        </wm-table>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn6_1" padding="unset unset unset 5px">
+                        <wm-table name="RfqTable1" title="RFQs" dataset="bind:Variables.ArolcustomerportalRfqData.dataSet" navigation="Basic" on-rowdblclick="Widgets.dialog3.open()">
+                            <wm-table-column binding="serial" caption="SN" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string"></wm-table-column>
+                            <wm-table-column binding="part" caption="Part" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string"></wm-table-column>
+                            <wm-table-column binding="description" caption="Description" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string"></wm-table-column>
+                        </wm-table>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer content="footer" name="footer1"></wm-footer>
+    <wm-view class="dialog-view" name="view1">
+        <wm-dialog dialogtype="design-dialog" modal="true" title="PO Details" iconclass="wi wi-file-text" name="dialog1">
+            <wm-layoutgrid name="layoutgrid2">
+                <wm-gridrow name="gridrow4">
+                    <wm-gridcolumn columnwidth="3" name="gridcolumn7">
+                        <wm-label padding="unset 0.5em" caption="PO Number" name="label1"></wm-label>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="9" name="gridcolumn8">
+                        <wm-label padding="unset 0.5em" caption="bind:Widgets.VwPoTable1.selecteditem.ponum" name="label2"></wm-label>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow5">
+                    <wm-gridcolumn columnwidth="3" name="gridcolumn9">
+                        <wm-label padding="unset 0.5em" caption="PO Date" name="label3"></wm-label>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="9" name="gridcolumn10">
+                        <wm-label padding="unset 0.5em" caption="bind:Widgets.VwPoTable1.selecteditem.podate" name="label4"></wm-label>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow14">
+                    <wm-gridcolumn columnwidth="3" name="gridcolumn28">
+                        <wm-label padding="unset 0.5em" caption="Serial Number" name="label15"></wm-label>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="9" name="gridcolumn29">
+                        <wm-label padding="unset 0.5em" caption="bind:Widgets.VwPoTable1.selecteditem.serial" name="label16"></wm-label>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow10">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn19">
+                        <wm-table name="PodetailTable1" title="" dataset="bind:Variables.ArolcustomerportalPodetailData.dataSet" navigation="Basic">
+                            <wm-table-column binding="partid" caption="Partid" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string"></wm-table-column>
+                            <wm-table-column binding="quantity" caption="Quantity" generator="assigned" pcdisplay="true" mobiledisplay="true" type="big_decimal"></wm-table-column>
+                            <wm-table-column binding="price" caption="Price" generator="assigned" pcdisplay="true" mobiledisplay="true" type="big_decimal"></wm-table-column>
+                        </wm-table>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow11">
+                    <wm-gridcolumn columnwidth="2" name="gridcolumn23"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="8" name="gridcolumn21">
+                        <wm-composite name="composite1">
+                            <wm-label class="col-md-3 control-label" name="label13" caption="Status"></wm-label>
+                            <wm-container class="col-md-9" name="container1">
+                                <wm-select name="select1" datavalue="bind:Widgets.VwPoTable1.selecteditem.status" dataset="Open, Closed, Filled, Cancelled,Confirmed"></wm-select>
+                            </wm-container>
+                        </wm-composite>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="2" name="gridcolumn24">
+                        <wm-button class="btn-default" caption="Update" type="button" margin="unset 0.5em" name="button4" on-click="Variables.updatepostatus.invoke()"></wm-button>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+            <wm-dialogactions name="dialogactions1">
+                <wm-button class="btn-primary" caption="Close" on-click="closeDialog();Widgets.VwPoTable1.refreshData()" name="button1"></wm-button>
+            </wm-dialogactions>
+        </wm-dialog>
+    </wm-view>
+    <wm-view class="dialog-view" name="view2">
+        <wm-dialog dialogtype="design-dialog" modal="true" title="Service Information" iconclass="wi wi-file-text" name="dialog2">
+            <wm-layoutgrid name="layoutgrid3">
+                <wm-gridrow name="gridrow6">
+                    <wm-gridcolumn columnwidth="4" name="gridcolumn11">
+                        <wm-label padding="unset 0.5em" caption="Serial Number" name="label5"></wm-label>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="8" name="gridcolumn12">
+                        <wm-label padding="unset 0.5em" caption="bind:Widgets.VwServiceTable1.selecteditem.sn" name="label6"></wm-label>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow7">
+                    <wm-gridcolumn columnwidth="4" name="gridcolumn13">
+                        <wm-label padding="unset 0.5em" caption="Date" name="label7"></wm-label>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="8" name="gridcolumn14">
+                        <wm-label padding="unset 0.5em" caption="bind:Widgets.VwServiceTable1.selecteditem.date" name="label8"></wm-label>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow15">
+                    <wm-gridcolumn columnwidth="4" name="gridcolumn30">
+                        <wm-label padding="unset 0.5em" caption="Status" name="label18"></wm-label>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="8" name="gridcolumn31">
+                        <wm-label padding="unset 0.5em" caption="bind:Variables.servicelv.dataSet.data[$i].status" name="label19"></wm-label>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow13">
+                    <wm-gridcolumn columnwidth="4" name="gridcolumn26">
+                        <wm-label padding="unset 0.5em" caption="Description" name="label17"></wm-label>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="8" name="gridcolumn27">
+                        <wm-label padding="unset 0.5em" caption="bind:Widgets.VwServiceTable1.selecteditem.description" name="label20"></wm-label>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow12">
+                    <wm-gridcolumn columnwidth="2" name="gridcolumn23_1"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="8" name="gridcolumn24_1">
+                        <wm-composite name="composite2">
+                            <wm-label class="col-md-3 control-label" name="label14" caption="Status"></wm-label>
+                            <wm-container class="col-md-9" name="container2">
+                                <wm-select name="select2" dataset="Open,Closed,Scheduled" datafield="All Fields" datavalue="bind:Variables.servicelv.dataSet.data[$i].status"></wm-select>
+                            </wm-container>
+                        </wm-composite>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="2" name="gridcolumn25">
+                        <wm-button class="btn-default" caption="Update" type="button" margin="unset 0.5em" name="button5" on-click="Variables.updateservicestatus.invoke()"></wm-button>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+            <wm-dialogactions name="dialogactions2">
+                <wm-button class="btn-primary" caption="Close" on-click="closeDialog();Variables.ArolcustomerportalVwServiceData.listRecords()" name="button2"></wm-button>
+            </wm-dialogactions>
+        </wm-dialog>
+    </wm-view>
+    <wm-view class="dialog-view" name="view3">
+        <wm-dialog dialogtype="design-dialog" modal="true" title="RFQ" iconclass="wi wi-file-text" name="dialog3">
+            <wm-layoutgrid name="layoutgrid4">
+                <wm-gridrow name="gridrow8">
+                    <wm-gridcolumn columnwidth="4" name="gridcolumn15">
+                        <wm-label padding="unset 0.5em" caption="SN" name="label9"></wm-label>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="8" name="gridcolumn16">
+                        <wm-label padding="unset 0.5em" caption="bind:Widgets.RfqTable1.selecteditem.serial" name="label10"></wm-label>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow9">
+                    <wm-gridcolumn columnwidth="4" name="gridcolumn17">
+                        <wm-label padding="unset 0.5em" caption="Part" name="label11"></wm-label>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="8" name="gridcolumn18">
+                        <wm-label padding="unset 0.5em" caption="bind:Widgets.RfqTable1.selecteditem.part" name="label12"></wm-label>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow16">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn32">
+                        <wm-label padding="unset 0.5em" name="label21" caption="bind:Widgets.RfqTable1.selecteditem.description"></wm-label>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow17">
+                    <wm-gridcolumn columnwidth="2" name="gridcolumn34"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="8" name="gridcolumn35">
+                        <wm-composite name="composite3">
+                            <wm-label class="col-md-3 control-label" name="label22" caption="Status"></wm-label>
+                            <wm-container class="col-md-9" name="container3">
+                                <wm-select name="select3" dataset="Open,Closed,Scheduled" datavalue="bind:Widgets.RfqTable1.selecteditem.status"></wm-select>
+                            </wm-container>
+                        </wm-composite>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="2" name="gridcolumn36">
+                        <wm-button class="btn-default" caption="update" type="button" margin="unset 0.5em" name="button6" on-click="Variables.updaterfqstatus.invoke()"></wm-button>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+            <wm-dialogactions name="dialogactions3">
+                <wm-button class="btn-primary" caption="Close" on-click="closeDialog();Variables.ArolcustomerportalRfqData.listRecords()" name="button3"></wm-button>
+            </wm-dialogactions>
+        </wm-dialog>
+    </wm-view>
+    <wm-view class="dialog-view" name="view4">
+        <wm-alertdialog name="notificationalertdialog" controller="NotificationDialogController" notificationdialog="alert" message="{{notification.text}}" title="{{notification.title}}" oktext="{{notification.okButtonText}}" alerttype="{{notification.alerttype}}"
+            on-ok="variableOnOk()" on-close="variableOnClose()"></wm-alertdialog>
+    </wm-view>
+</wm-page>

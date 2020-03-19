@@ -1,0 +1,48 @@
+<wm-page data-ng-controller="EditAccountPageController" pagetitle="Edit Account" name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-content name="content1">
+        <wm-page-content columnwidth="12" name="page_content1">
+            <wm-liveform errormessage="" title="Vendor Info" iconclass="wi wi-edit" defaultmode="Edit" dataset="bind:Variables.vendortbl.dataSet" captionalign="left" captionposition="top" name="VendorLiveForm1" formdata="bind:Variables.vendortbl.dataSet.data[0]">
+                <wm-layoutgrid columns="3" name="layoutgrid2">
+                    <wm-gridrow name="gridrow8">
+                        <wm-gridcolumn columnwidth="4" name="gridcolumn14">
+                            <wm-form-field name="vendorId" displayname="Vendor Id" required="true" show="true" generator="assigned" primary-key="true" key="vendorId" type="integer" is-related="false" step="0" pc-display="true" mobile-display="true" widget="number"></wm-form-field>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn columnwidth="4" name="gridcolumn15">
+                            <wm-form-field name="name" displayname="Name" required="false" show="true" generator="assigned" primary-key="false" key="name" type="string" is-related="false" maxchars="45" pc-display="true" mobile-display="true" widget="text"></wm-form-field>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn columnwidth="4" name="gridcolumn16">
+                            <wm-form-field name="street" displayname="Street" required="false" show="true" generator="assigned" primary-key="false" key="street" type="string" is-related="false" maxchars="45" pc-display="true" mobile-display="true" widget="text"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow9">
+                        <wm-gridcolumn columnwidth="4" name="gridcolumn17">
+                            <wm-form-field name="city" displayname="City" required="false" show="true" generator="assigned" primary-key="false" key="city" type="string" is-related="false" maxchars="45" pc-display="true" mobile-display="true" widget="text"></wm-form-field>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn columnwidth="4" name="gridcolumn18">
+                            <wm-form-field name="state" displayname="State" required="false" show="true" generator="assigned" primary-key="false" key="state" type="string" is-related="false" maxchars="45" pc-display="true" mobile-display="true" widget="text"></wm-form-field>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn columnwidth="4" name="gridcolumn19">
+                            <wm-form-field name="zip" displayname="Zip" required="false" show="true" generator="assigned" primary-key="false" key="zip" type="string" is-related="false" maxchars="45" pc-display="true" mobile-display="true" widget="text"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow10">
+                        <wm-gridcolumn columnwidth="4" name="gridcolumn20">
+                            <wm-form-field name="description" displayname="Description" required="false" show="true" generator="assigned" primary-key="false" key="description" type="string" is-related="false" maxchars="45" pc-display="true" mobile-display="true"
+                                widget="text"></wm-form-field>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn columnwidth="4" name="gridcolumn21">
+                            <wm-form-field name="username" displayname="Username" required="false" show="true" generator="assigned" primary-key="false" key="username" type="string" is-related="false" maxchars="45" pc-display="true" mobile-display="true" widget="text"></wm-form-field>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn columnwidth="4" name="gridcolumn22">
+                            <wm-form-field name="password" displayname="Password" required="false" show="true" generator="assigned" primary-key="false" key="password" type="string" is-related="false" maxchars="45" pc-display="true" mobile-display="true" widget="text"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                </wm-layoutgrid>
+                <wm-form-action key="reset" class="form-reset btn-secondary" iconclass="wi wi-refresh" action="reset()" display-name="Reset" show="true" type="button" update-mode="true"></wm-form-action>
+                <wm-form-action key="save" class="form-save btn-success" iconclass="wi wi-save" display-name="Save" show="true" type="submit" update-mode="true"></wm-form-action>
+            </wm-liveform>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer content="footer" name="footer1"></wm-footer>
+</wm-page>

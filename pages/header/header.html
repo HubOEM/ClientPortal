@@ -1,0 +1,25 @@
+<wm-partial data-ng-controller="headerPageController" name="header" type="header">
+    <wm-layoutgrid name="headerlayout">
+        <wm-gridrow name="headerrow">
+            <wm-gridcolumn name="headerleft" verticalalign="middle" columnwidth="3" padding="8px unset unset unset">
+                <wm-picture picturesource="resources/images/imagelists/logo4.png" name="AppLogo" margin="unset unset unset 5px" height="70px" pictureaspect="None" on-click="Actions.goToPage_Main.invoke()"></wm-picture>
+            </wm-gridcolumn>
+            <wm-gridcolumn columnwidth="1" name="gridcolumn5"></wm-gridcolumn>
+            <wm-gridcolumn columnwidth="5" name="gridcolumn4_1" horizontalalign="center">
+                <wm-nav type="pills" autoclose="outsideClick" name="nav4">
+                    <wm-nav-item name="list_home">
+                        <wm-anchor caption="Dashboard" name="homeLink" iconclass="" on-click="Actions.goToPage_Main.invoke()" iconurl="resources/images/imagelists/opo3.png" iconwidth="32" iconheight="32"></wm-anchor>
+                    </wm-nav-item>
+                    <wm-nav-item name="list_services"></wm-nav-item>
+                    <wm-nav-item name="nav_item5"></wm-nav-item>
+                    <wm-nav-item name="nav_item4">
+                        <wm-anchor name="anchor2" iconclass="" caption="Master Parts" iconurl="resources/images/imagelists/parts2.png" iconwidth="32" iconheight="32" on-click="Actions.goToPage_Parts.invoke()"></wm-anchor>
+                    </wm-nav-item>
+                </wm-nav>
+            </wm-gridcolumn>
+            <wm-gridcolumn name="headerright" horizontalalign="right" verticalalign="middle" columnwidth="3" padding="1em 1em unset unset">
+                <wm-popover popoverwidth="80" popoverheight="120" margin="unset 0.5em" name="popover1" caption="bind:Variables.loggedInUser.dataSet.name" content="UserOpts"></wm-popover>
+            </wm-gridcolumn>
+        </wm-gridrow>
+    </wm-layoutgrid>
+</wm-partial>

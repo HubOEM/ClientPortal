@@ -1,0 +1,115 @@
+<wm-page data-ng-controller="PartsPageController" pagetitle="Parts" name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-content name="content1">
+        <wm-page-content columnwidth="12" name="page_content1">
+            <wm-layoutgrid name="layoutgrid2">
+                <wm-gridrow name="gridrow7">
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn19">
+                        <wm-composite name="composite1">
+                            <wm-label class="col-md-3 control-label" name="label1" caption="Equipment"></wm-label>
+                            <wm-container class="col-md-9" name="container1">
+                                <wm-select name="select1" dataset="bind:Variables.eqp.dataSet" datafield="All Fields" displayexpression="bind:$[data[$i].serial]+&quot; &quot;+$[data[$i].description]"></wm-select>
+                            </wm-container>
+                        </wm-composite>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn20"></wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+            <wm-livetable formlayout="dialog" name="PartsLiveTable1">
+                <wm-table gridfirstrowselect="true" editmode="dialog" name="PartsTable1" title="Parts List" dataset="bind:Variables.ArolcustomerportalPartsData.dataSet" navigation="Basic">
+                    <wm-table-column binding="serialnumber" caption="Serialnumber" edit-widget-type="text" type="string" generator="assigned" show="true" readonly="false"></wm-table-column>
+                    <wm-table-column binding="code" caption="Code" edit-widget-type="text" type="string" generator="assigned" show="true" readonly="false"></wm-table-column>
+                    <wm-table-column binding="description" caption="Description" edit-widget-type="text" type="string" generator="assigned" show="true" readonly="false"></wm-table-column>
+                    <wm-table-column binding="_group" caption="Group" edit-widget-type="text" type="string" generator="assigned" show="true" readonly="false"></wm-table-column>
+                    <wm-table-column binding="rowOperations" caption="Actions" width="120px" type="custom" readonly="true" sortable="false" searchable="false" show="true"></wm-table-column>
+                    <wm-table-action key="addNewRow" display-name="New" show="true" class="btn-primary" iconclass="wi wi-plus" title="New" action="addNewRow()" shortcutkey="" disabled="false" widget-type="button"></wm-table-action>
+                    <wm-table-row-action key="updaterow" display-name="" show="true" class="btn-transparent" iconclass="wi wi-pencil" title="Edit" action="editRow()" disabled="false"></wm-table-row-action>
+                    <wm-table-row-action key="deleterow" display-name="" show="true" class="btn-transparent" iconclass="wi wi-trash" title="Delete" action="deleteRow()" disabled="false"></wm-table-row-action>
+                </wm-table>
+                <wm-liveform errormessage="" title="Parts Info" formlayout="dialog" iconclass="wi wi-edit" name="PartsLiveForm1" dataset="bind:Variables.ArolcustomerportalPartsData.dataSet" captionalign="left" captionposition="top">
+                    <wm-layoutgrid columns="3" name="layoutgrid1">
+                        <wm-gridrow name="gridrow1">
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn1">
+                                <wm-form-field name="serialnumber" displayname="Serialnumber" show="true" primary-key="false" generator="assigned" period="false" key="serialnumber" type="string" readonly="false" required="false" widget="text" maxchars="45"
+                                    inputtype="text" placeholder="Enter value"></wm-form-field>
+                            </wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn2">
+                                <wm-form-field name="code" displayname="Code" show="true" primary-key="false" generator="assigned" period="false" key="code" type="string" readonly="false" required="true" widget="text" maxchars="45" inputtype="text" placeholder="Enter value"></wm-form-field>
+                            </wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn3">
+                                <wm-form-field name="description" displayname="Description" show="true" primary-key="false" generator="assigned" period="false" key="description" type="string" readonly="false" required="false" widget="text" maxchars="500"
+                                    inputtype="text" placeholder="Enter value"></wm-form-field>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                        <wm-gridrow name="gridrow2">
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn4">
+                                <wm-form-field name="unit" displayname="Unit" show="true" primary-key="false" generator="assigned" period="false" key="unit" type="string" readonly="false" required="false" widget="text" maxchars="45" inputtype="text" placeholder="Enter value"></wm-form-field>
+                            </wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn5">
+                                <wm-form-field name="qty" displayname="Qty" show="true" primary-key="false" generator="assigned" period="false" key="qty" type="string" readonly="false" required="false" widget="text" maxchars="45" inputtype="text" placeholder="Enter value"></wm-form-field>
+                            </wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn6">
+                                <wm-form-field name="price" displayname="Price" show="true" primary-key="false" generator="assigned" period="false" key="price" type="string" readonly="false" required="false" widget="text" maxchars="45" inputtype="text" placeholder="Enter value"></wm-form-field>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                        <wm-gridrow name="gridrow3">
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn7">
+                                <wm-form-field name="delivery" displayname="Delivery" show="true" primary-key="false" generator="assigned" period="false" key="delivery" type="string" readonly="false" required="false" widget="text" maxchars="45" inputtype="text"
+                                    placeholder="Enter value"></wm-form-field>
+                            </wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn8">
+                                <wm-form-field name="_group" displayname="Group" show="true" primary-key="false" generator="assigned" period="false" key="_group" type="string" readonly="false" required="false" widget="text" maxchars="45" inputtype="text"
+                                    placeholder="Enter value"></wm-form-field>
+                            </wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn9">
+                                <wm-form-field name="life" displayname="Life" show="true" primary-key="false" generator="assigned" period="false" key="life" type="integer" readonly="false" required="false" step="0" widget="number" inputtype="number" placeholder="Enter value"></wm-form-field>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                        <wm-gridrow name="gridrow4">
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn10">
+                                <wm-form-field name="lifeunits" displayname="Life Dimension" show="true" primary-key="false" generator="assigned" period="false" key="lifeunits" type="string" readonly="false" widget="select" defaultvalue="Months" maxchars="45"
+                                    placeholder="Select value" dataset="Hours,Days,Months"></wm-form-field>
+                            </wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn11">
+                                <wm-form-field name="oemPartNo" displayname="Oem Part No" show="true" primary-key="false" generator="assigned" period="false" key="oemPartNo" type="string" readonly="false" required="false" widget="text" maxchars="45" inputtype="text"
+                                    placeholder="Enter value"></wm-form-field>
+                            </wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn12">
+                                <wm-form-field name="partsPerMachine" displayname="Parts Per Machine" show="true" primary-key="false" generator="assigned" period="false" key="partsPerMachine" type="string" readonly="false" required="false" widget="text" maxchars="45"
+                                    inputtype="text" placeholder="Enter value"></wm-form-field>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                        <wm-gridrow name="gridrow5">
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn13">
+                                <wm-form-field name="leadTime" displayname="Lead Time" show="true" primary-key="false" generator="assigned" period="false" key="leadTime" type="string" readonly="false" required="false" widget="text" maxchars="45" inputtype="text"
+                                    placeholder="Enter value"></wm-form-field>
+                            </wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn14">
+                                <wm-form-field name="leadDimension" displayname="Lead Dimension" show="true" primary-key="false" generator="assigned" period="false" key="leadDimension" type="string" readonly="false" widget="select" maxchars="45" placeholder="Select value"
+                                    dataset="Hours,Days,Months"></wm-form-field>
+                            </wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn15">
+                                <wm-form-field name="warrantyLength" displayname="Warranty Length" show="true" primary-key="false" generator="assigned" period="false" key="warrantyLength" type="string" readonly="false" required="false" widget="text" maxchars="45"
+                                    inputtype="text" placeholder="Enter value"></wm-form-field>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                        <wm-gridrow name="gridrow6">
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn16">
+                                <wm-form-field name="warrantyDimension" displayname="Warranty Dimension" show="true" primary-key="false" generator="assigned" period="false" key="warrantyDimension" type="string" readonly="false" widget="select" defaultvalue="Hours"
+                                    maxchars="45" placeholder="Select value" dataset="Hours,Days,Months"></wm-form-field>
+                            </wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn17">
+                                <wm-form-field name="reccomendedStockQty" displayname="Reccomended Stock Qty" show="true" primary-key="false" generator="assigned" period="false" key="reccomendedStockQty" type="string" readonly="false" required="false" widget="text"
+                                    maxchars="45" inputtype="text" placeholder="Enter value"></wm-form-field>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                    </wm-layoutgrid>
+                    <wm-form-field name="idparts" displayname="Idparts" show="false" primary-key="true" generator="identity" period="false" key="idparts" type="integer" readonly="true" required="true" step="0" widget="number" inputtype="number" placeholder="Enter value"></wm-form-field>
+                    <wm-form-action key="cancel" display-name="Cancel" show="true" class="form-cancel btn-secondary" iconclass="wi wi-cancel" title="Cancel" action="cancel()" disabled="false" type="button" update-mode="true"></wm-form-action>
+                    <wm-form-action key="save" display-name="Save" show="true" class="form-save btn-success" iconclass="wi wi-save" title="Save" disabled="false" type="submit" update-mode="true"></wm-form-action>
+                </wm-liveform>
+            </wm-livetable>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer content="footer" name="footer1"></wm-footer>
+</wm-page>
